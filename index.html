@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exploding Heart</title>
+  <title>I Love You Samiya</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
     
@@ -21,8 +21,8 @@
 
     .heart {
       position: relative;
-      width: 200px; /* Double size */
-      height: 200px; /* Double size */
+      width: 100px;
+      height: 100px;
       background-color: red;
       transform: rotate(-45deg);
       margin-top: 50px;
@@ -34,17 +34,17 @@
     .heart::after {
       content: "";
       position: absolute;
-      width: 200px; /* Double size */
-      height: 200px; /* Double size */
+      width: 100px;
+      height: 100px;
       background-color: red;
       border-radius: 50%;
-      top: -100px;
+      top: -50px;
       left: 0;
     }
 
     .heart::after {
       top: 0;
-      left: 100px;
+      left: 50px;
     }
 
     @keyframes heartbeat {
@@ -71,14 +71,14 @@
         opacity: 1;
       }
       100% {
-        transform: scale(0.5) translate(calc(var(--dx) * 400px), calc(var(--dy) * 400px)); /* Adjust explosion for larger heart */
+        transform: scale(0.5) translate(calc(var(--dx) * 200px), calc(var(--dy) * 200px));
         opacity: 0;
       }
     }
 
     .message {
       display: none;
-      font-size: 70px; /* Increase text size */
+      font-size: 50px;
       color: red;
       margin-top: 20px;
       font-family: "Ubuntu", serif; /* Apply the font to the message */
@@ -87,7 +87,7 @@
 </head>
 <body>
   <div class="heart" id="heart"></div>
-  <div class="message" id="message">I Love You Samiya</div>
+  <div class="message" id="message"><b>I Love You Samiya</b></div>
 
   <script>
     const heart = document.getElementById("heart");
