@@ -21,8 +21,8 @@
 
     .heart {
       position: relative;
-      width: 100px;
-      height: 100px;
+      width: 200px; /* Double size */
+      height: 200px; /* Double size */
       background-color: red;
       transform: rotate(-45deg);
       margin-top: 50px;
@@ -34,17 +34,17 @@
     .heart::after {
       content: "";
       position: absolute;
-      width: 100px;
-      height: 100px;
+      width: 200px; /* Double size */
+      height: 200px; /* Double size */
       background-color: red;
       border-radius: 50%;
-      top: -50px;
+      top: -100px;
       left: 0;
     }
 
     .heart::after {
       top: 0;
-      left: 50px;
+      left: 100px;
     }
 
     @keyframes heartbeat {
@@ -71,14 +71,14 @@
         opacity: 1;
       }
       100% {
-        transform: scale(0.5) translate(calc(var(--dx) * 200px), calc(var(--dy) * 200px));
+        transform: scale(0.5) translate(calc(var(--dx) * 400px), calc(var(--dy) * 400px)); /* Adjust explosion for larger heart */
         opacity: 0;
       }
     }
 
     .message {
       display: none;
-      font-size: 50px;
+      font-size: 70px; /* Increase text size */
       color: red;
       margin-top: 20px;
       font-family: "Ubuntu", serif; /* Apply the font to the message */
@@ -87,7 +87,7 @@
 </head>
 <body>
   <div class="heart" id="heart"></div>
-  <div class="message" id="message"><b>I Love You Samiya</b></div>
+  <div class="message" id="message">I Love You Samiya</div>
 
   <script>
     const heart = document.getElementById("heart");
